@@ -7,10 +7,10 @@ The full readme is generated over in [docker-library/docs](https://github.com/do
 
 
 ## Steps
-
+Clone this repo 
+and goto this link
+(local running odoo)[http://localhost:8069/web/database/manager]
 ```
-git clone https://github.com/odoo/docker.git .
-cd 17.0/
-sudo docker run -d -e POSTGRES_USER=odoo -e POSTGRES_PASSWORD=odoo -e POSTGRES_DB=postgres --name db postgres:15
-sudo docker run -v odoo-data:/var/lib/odoo -d -p 8069:8069 --name odoo --link db:db -t odoo
+sudo docker run -d -e POSTGRES_USER=odoodata -e POSTGRES_PASSWORD=odoodata -e POSTGRES_DB=postgresql --name database postgres:15
+sudo docker run -v odoo-data:/var/lib/odoo -d -p 8069:8069 --name odoo --link db:database -t odoo
 ```
