@@ -7,10 +7,9 @@ The full readme is generated over in [docker-library/docs](https://github.com/do
 
 
 ## Steps
-Clone this repo 
-and goto this link
-(local running odoo)[http://localhost:8069/web/database/manager]
+Clone this repo and run these commands
 ```
+<<<<<<< HEAD
 sudo docker run -d -e POSTGRES_USER=odoo -e POSTGRES_PASSWORD=odoo -e POSTGRES_DB=postgres --name db postgres:15
 sudo docker run -v odoo-data:/var/lib/odoo -d -p 8069:8069 --name odoo --link db:db -t odoo
 ```
@@ -42,3 +41,7 @@ Find your module in the list and install it.
 ```
 sudo docker exec -it odoo /bin/bash -c "odoo -u all -d your_database_name"
 ```
+Database name is odoo and backup .zip file is available in this repo
+and then go to this link (local running odoo)[http://localhost:8069] and then click on restore data base
+Alternatiely you can create one and then restore by going to this link
+[local running odoo database manager](http://localhost:8069/web/database/manager)
